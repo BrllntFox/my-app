@@ -1,8 +1,10 @@
 import EventForm from "@/components/shared/EventForm";
+import { connectToDatabase } from "@/lib/databases";
 import { Image, Card, CardFooter, CardHeader, Button, Divider, CardBody, Link } from "@nextui-org/react";
 
 
-export default function Home() {
+export default async function Home() {
+  const db = await connectToDatabase()
   return (
   
   <section className="flex my-auto">
