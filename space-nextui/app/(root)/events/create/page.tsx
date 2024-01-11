@@ -1,13 +1,11 @@
-import EventForm from "@/components/shared/EventForm";
-import { connectToDatabase } from "@/lib/databases";
-import { Image, Card, CardFooter, CardHeader, Button, Divider, CardBody, Link } from "@nextui-org/react";
+import EventForm from '@/components/shared/EventForm'
+import { Button, Card, CardBody, CardFooter, CardHeader, Divider, Image, Link } from '@nextui-org/react'
+import React from 'react'
 
 
-export default async function Home() {
-  const db = await connectToDatabase()
+const EventCreatePage = () => {
   return (
-  
-  <section className="flex my-auto">
+    <section className="flex my-auto">
     
     <div className="flex flex-row items-center justify-between gap-8 md:gap-16">
     <Card isFooterBlurred className="w-[400px] h-[640px] col-span-12 sm:col-span-7">
@@ -38,10 +36,13 @@ export default async function Home() {
     </Card>   
 
     {/* Form card/ */}
-    <EventForm type="Create"/>
+    <div className="w-[400px]">
+  <EventForm type="Create" userId="fakeId" />
+      </div>
      </div>
 
   </section>
-  
-  );
+  )
 }
+
+export default EventCreatePage
