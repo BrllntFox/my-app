@@ -92,14 +92,14 @@ const EventForm = ({ userId, type }: EventFormProps) => {
               )}
             />
              {/* Category input */}
-             <Controller
+             {/* <Controller
               control={control}
               name="categoryId"
               rules={{ required: true }}
               render={({ field, fieldState }) => (
 
               )}
-            />
+            /> */}
             {/* Description */}
             <Controller
               control={control}
