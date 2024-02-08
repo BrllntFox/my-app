@@ -1,4 +1,5 @@
-import EventForm from '@/components/shared/EventForm'
+import EventFormData from '@/components/shared/EventFormData'
+import FileUploader from '@/components/shared/FileUploader'
 import { auth } from '@clerk/nextjs'
 import { Button, Card, CardBody, CardFooter, CardHeader, Divider, Image, Link } from '@nextui-org/react'
 import React from 'react'
@@ -12,18 +13,13 @@ console.log(userId)
     <section className="flex my-auto">
     
     <div className="flex flex-row items-center justify-between gap-8 md:gap-16">
-    <Card isFooterBlurred className="w-[400px] h-[640px] col-span-12 sm:col-span-7">
+    <Card isFooterBlurred className="w-[400px] h-[640px] col-span-12 sm:col-span-7 bg-transparent">
       <CardHeader className="absolute z-10 top-1 flex-col items-start">
         <p className="text-tiny text-white/60 uppercase font-bold">Your day your way</p>
         <h4 className="text-white/90 font-medium text-xl">Your checklist for better sleep</h4>
       </CardHeader>
-      <Image
-        removeWrapper
-        alt="Relaxing app background"
-        className="z-0 w-full h-full object-cover"
-        src="https://placehold.co/600x400"
-      />
-      <CardFooter className="absolute bg-black/40 bottom-0 z-10 border-t-1 border-default-600 dark:border-default-100">
+      <FileUploader userId={userId}/>
+      {/* <CardFooter className="absolute bg-black/40 bottom-0 z-10 border-t-1 border-default-600 dark:border-default-100">
         <div className="flex flex-grow gap-2 items-center">
           <Image
             alt="Breathing app icon"
@@ -36,12 +32,12 @@ console.log(userId)
           </div>
         </div>
         <Button radius="full" size="sm">Get App</Button>
-      </CardFooter>
+      </CardFooter> */}
     </Card>   
 
     {/* Form card/ */}
     <div className="w-[400px]">
-  <EventForm type="Create" userId={userId} />
+  <EventFormData userId={userId} type="Create" />
       </div>
      </div>
 

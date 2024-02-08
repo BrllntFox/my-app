@@ -9,15 +9,15 @@ export default authMiddleware({
     '/events/:id',
     '/api/webhook/clerk',
   '/api/uploadthing',
-    "/api/webhook(.*)",
-    
+    "/api/webhook(.*)",  
+    "/test-layout"     
   ],
   ignoredRoutes: [
     '/api/webhook/clerk',
     '/api/webhook/stripe',
     '/api/uploadthing',
     '/api/clerk'
-  ]
+  ],
 });
  
 export const config = {

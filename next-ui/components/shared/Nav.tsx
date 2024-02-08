@@ -22,7 +22,7 @@ const Nav = () => {
           </Link>
         </NavbarItem>
         <NavbarItem isActive>
-          <Link href="#" aria-current="page">
+          <Link href="/events/create" aria-current="page">
             Create Event
           </Link>
         </NavbarItem>
